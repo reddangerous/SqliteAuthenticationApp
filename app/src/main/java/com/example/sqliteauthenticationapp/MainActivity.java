@@ -40,12 +40,14 @@ public class MainActivity extends AppCompatActivity {
                     if(chechuseremailpass == true){
                         Toast.makeText(MainActivity.this, "Sign in Succesful", Toast.LENGTH_SHORT).show();
                         //intent Home Activity
-
+                        Intent intent = new Intent(getApplicationContext(), NotesHomeActivity.class);
+                        startActivity(intent);
                     }else{
                         Toast.makeText(MainActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
+
         });
         Signup.setOnClickListener(new View.OnClickListener() {
             @Override
